@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  text-align: center;
+
+  img {
+    margin-right: 30px;
+    margin-left: 20px;
+    border-radius: 15px;
+  }
+
+  .description {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .techs {
+    margin-bottom: 30px;
+  }
+
+  .links {
+    margin-top: 30px;
+  }
+
+  a {
+    text-decoration: none;
+    color: magenta;
+    margin-right: 20px;
+  }
+}

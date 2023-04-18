@@ -1,31 +1,77 @@
 .container {
   display: flex;
   flex-direction: row;
-  margin-bottom: 40px;
-  text-align: center;
+  margin-bottom: 330px;
+  text-align: justify;
 
-  img {
-    margin-right: 30px;
-    margin-left: 20px;
-    border-radius: 15px;
+  .imgContainer {
+    position: relative; /* добавляем position: relative */
+    width: 700px;
+    .title {
+      width: 623px;
+      font-size: 35px;
+      margin-bottom: 10px;
+      margin-left: 150px;
+    }
+    .img {
+      margin-right: 30px;
+      margin-left: 20px;
+      margin-bottom: 100px;
+      border-radius: 15px;
+      border: 2px ridge silver;
+      padding: 1px;
+      position: absolute; /* добавляем position: absolute */
+      top: 10; /* и top: 0 */
+      left: 0; /* и left: 0 */
+      width: 600px;
+      transition: 0.4s ease-in-out;
+      &:hover {
+        width: 800px;
+        transition: 0.4s ease-in-out;
+        z-index: +1;
+        &:last-child {
+          transform-origin: center;
+          transform: translateY(10px) translateX(10px);
+        }
+      }
+    }
   }
 
   .description {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-right: 50px;
+    margin-top: 47px;
+    line-height: 1.5;
+    p:last-child {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
   }
 
   .techs {
     margin-bottom: 30px;
+    font-weight: bolder;
+    line-height: 1.5;
   }
 
   .links {
     margin-top: 30px;
-  }
-
-  a {
-    text-decoration: none;
-    color: magenta;
-    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    .link {
+      text-decoration: none;
+      color: magenta;
+      margin-right: 20px;
+      padding: 7px;
+      border-radius: 15px;
+      box-shadow: 0px 0px 10px 5px silver;
+      &:hover {
+        background-color: rgb(236, 224, 224);
+      }
+      &:active {
+        transform: translateY(5px);
+        transition: 0.2s ease-in-out;
+        color: crimson;
+      }
+    }
   }
 }

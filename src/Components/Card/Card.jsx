@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./Card.module.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Card = ({ title, imgUrl, description, description2, techs, refs }) => {
   return (
     <div className={styles.container}>
-      <div>
-        <h2>{title}</h2>
-        <img src={imgUrl} width={700} alt='portfolio' />
+      <div className={styles.imgContainer}>
+        <h2 className={styles.title}>{title}</h2>
+        <img className={styles.img} src={imgUrl} width={600} alt='portfolio' />
       </div>
       <div>
         <div className={styles.description}>
@@ -22,12 +22,12 @@ const Card = ({ title, imgUrl, description, description2, techs, refs }) => {
             </ul>
           ))}
           <div className={styles.links}>
-            <Link to={refs[0]} target='blank'>
+            <NavLink className={styles.link} to={refs[0]} target='blank'>
               Проект на Github
-            </Link>
-            <Link to={refs[1]} target='blank'>
+            </NavLink>
+            <NavLink className={styles.link} to={refs[1]} target='blank'>
               Посмотреть проект на Github Pages
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>

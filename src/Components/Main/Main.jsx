@@ -25,7 +25,7 @@ const Main = () => {
   const cardOutput = items.map((item) => <Card key={item.id} {...item} />);
 
   return (
-    <div className='container'>
+    <div className={styles.container}>
       {loading ? <h2>Loading...</h2> : cardOutput}
     </div>
   );

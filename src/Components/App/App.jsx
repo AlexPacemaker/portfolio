@@ -1,13 +1,13 @@
-import styles from "./App.module.scss";
 import Main from "../Main/Main";
 import { Routes, Route } from "react-router-dom";
 import MainOutlet from "../Outlets/MainOutlet";
 import About from "../About/About";
 import NotFound from "../NotFound/NotFound";
+import ScrollToTopButton from "../ScrollToTop/ScrollToTop";
 
 function App() {
   return (
-    <div className={styles.container}>
+    <div>
       <Routes>
         <Route path='/' element={<MainOutlet />}>
           <Route path='' element={<Main />} />
@@ -15,6 +15,7 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
+      <ScrollToTopButton />
     </div>
   );
 }

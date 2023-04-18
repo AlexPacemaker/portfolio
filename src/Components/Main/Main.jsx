@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setItems, setLoading } from "../../redux/slices/mainSlice";
 import axios from "axios";
 import Card from "../Card/Card";
 import styles from "./Main.module.scss";
@@ -6,15 +8,15 @@ import styles from "./Main.module.scss";
 const API_URL = "http://45.144.3.110:4444/portfolio";
 
 const Main = () => {
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { items, loading } = useSelector((state) => state.mainSlice);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     try {
       (async () => {
         await axios(API_URL).then((res) => {
-          setItems(res.data);
-          setLoading(false);
+          dispatch(setItems(res.data));
+          dispatch(setLoading(false));
         });
       })();
     } catch (error) {

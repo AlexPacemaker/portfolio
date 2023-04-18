@@ -1,0 +1,20 @@
+.scroll {
+  display: flex;
+  justify-content: center;
+  button {
+    font-size: 25px;
+    padding: 6px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 3px silver;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(236, 224, 224);
+    }
+    &:active {
+      transform: translateY(5px);
+      transition: 0.2s ease-in-out;
+      color: crimson;
+    }
+  }
+}

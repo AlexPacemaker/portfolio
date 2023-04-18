@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Card.module.scss";
-import { Link, NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 
 const Card = ({ title, imgUrl, description, description2, techs, refs }) => {
   return (

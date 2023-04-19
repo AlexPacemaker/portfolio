@@ -19,4 +19,4 @@
     - SSCS как препроцессор CSS
     - CSS-Модули для лучшей организации CSS
 
-https://alexpacemaker.github.io/react-pizzeria/
+https://alexpacemaker.github.io/portfolio/

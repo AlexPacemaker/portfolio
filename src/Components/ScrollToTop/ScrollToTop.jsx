@@ -3,6 +3,7 @@ import styles from "./ScrollToTop.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { setVisible } from "../../redux/slices/scrollSlice";
 
+//компонент кнопки возврата в начало страницы
 const ScrollToTopButton = () => {
   const { visible } = useSelector((state) => state.scrollSlice);
   const dispatch = useDispatch();

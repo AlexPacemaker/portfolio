@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./NotFound.module.scss";
 
+//компонент возвращает страницу с jsx разметкой, если такой страницы на сайте нет
 const NotFound = () => {
   return (
     <div className={styles.container}>

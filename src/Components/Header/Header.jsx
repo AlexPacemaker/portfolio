@@ -10,9 +10,7 @@ const Header = () => {
       <div className={styles.container}>
         <NavLink to='/'>Портфолио</NavLink>
         <NavLink to='/about'>Обо мне</NavLink>
-        <NavLink to='https://github.com/AlexPacemaker?tab=repositories'>
-          GitHub
-        </NavLink>
+        <NavLink to='https://github.com/AlexPacemaker'>GitHub</NavLink>
       </div>
       <hr />
     </>

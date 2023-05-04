@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "BrunoAceSC";
+  src: url("../../../../Assets/Fonts/BrunoAceSC-Regular.ttf");
+  font-weight: regular;
+  font-style: normal;
+}
+
+.container {
+  font-family: "BrunoAceSC";
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  left: 400px;
+}

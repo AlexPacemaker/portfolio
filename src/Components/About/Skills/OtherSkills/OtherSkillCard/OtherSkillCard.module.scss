@@ -1,0 +1,27 @@
+.container {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  padding: 10px;
+  margin-right: 90px;
+  margin-bottom: 25px;
+  img {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  &:hover {
+    transform: translateY(-8px);
+    transition: 0.5s ease-in-out;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 5px grey;
+  }
+  p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}

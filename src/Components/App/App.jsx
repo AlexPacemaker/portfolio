@@ -11,8 +11,8 @@ function App() {
       {/* маршрутизация приложения */}
       <Routes>
         <Route path='/' element={<MainOutlet />}>
-          <Route path='' element={<Main />} />
-          <Route path='/about' element={<About />} />
+          <Route path='' element={<About />} />
+          <Route path='/portfolio' element={<Main />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>

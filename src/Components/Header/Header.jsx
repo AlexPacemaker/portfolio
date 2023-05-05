@@ -9,8 +9,8 @@ const Header = () => {
     <>
       <div className={styles.container}>
         <p className={styles.slogan}>"Вижу цель - не вижу припятствия..."</p>
-        <NavLink to='/'>Портфолио</NavLink>
-        <NavLink to='/about'>Обо мне</NavLink>
+        <NavLink to='/'>Обо мне</NavLink>
+        <NavLink to='/portfolio'>Портфолио</NavLink>
         <NavLink to='https://github.com/AlexPacemaker'>GitHub</NavLink>
       </div>
       <hr />

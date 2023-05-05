@@ -1,18 +1,23 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { API_URL3 } from "../../../../config";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  setLoading,
+  setMainSkills,
+} from "../../../../redux/slices/mainSkillsSlice";
 import MainSkillsCard from "./MainSkillsCard/MainSkillsCard";
 import styles from "./MainSkills.module.scss";
 
 const MainSkills = () => {
-  const [mainSkills, setMainSkills] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { mainSkills, loading } = useSelector((state) => state.mainSkillsSlice);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     (async () => {
       await axios.get(API_URL3).then((res) => {
-        setMainSkills(res.data);
-        setLoading(false);
+        dispatch(setMainSkills(res.data));
+        dispatch(setLoading(false));
         console.log(res.data);
       });
     })();

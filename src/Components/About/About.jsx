@@ -7,10 +7,13 @@ import Skills from "./Skills/Skills";
 //Родительски компонент для компонентов Bio и Skills
 const About = () => {
   return (
-    <div className={styles.container}>
-      <Bio />
-      <Skills />
-    </div>
+    <>
+      <div className={styles.container}>
+        <Bio />
+        <Skills />
+      </div>
+      
+    </>
   );
 };
 

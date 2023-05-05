@@ -6,7 +6,7 @@ const initialState = {
   loading: true,
 };
 
-export const aboutSlice = createSlice({
+export const bioSlice = createSlice({
   name: "about",
   initialState,
   reducers: {
@@ -19,5 +19,5 @@ export const aboutSlice = createSlice({
   },
 });
 
-export const { data, loading, setData, setLoading } = aboutSlice.actions;
-export default aboutSlice.reducer;
+export const { data, loading, setData, setLoading } = bioSlice.actions;
+export default bioSlice.reducer;

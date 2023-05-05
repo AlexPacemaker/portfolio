@@ -3,11 +3,11 @@ import styles from "./Bio.module.scss";
 import axios from "axios";
 import DOMPurify from "dompurify";
 import { useDispatch, useSelector } from "react-redux";
-import { setLoading, setData } from "../../../redux/slices/aboutSlice";
+import { setLoading, setData } from "../../../redux/slices/bioSlice";
 import { API_URL2 } from "../../../config";
 
 const Bio = () => {
-  const { data, loading } = useSelector((state) => state.aboutSlice);
+  const { data, loading } = useSelector((state) => state.bioSlice);
   const dispatch = useDispatch();
 
   //Используется useEffect для отправки асинхронного запроса на бэкэнд, получения данных и установки состояния
@@ -43,7 +43,7 @@ const Bio = () => {
                 className={styles.text}
                 dangerouslySetInnerHTML={{ __html: cleanData }}
               ></div>
-            </div>        
+            </div>
           </>
         )}
       </div>

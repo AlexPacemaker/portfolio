@@ -2,12 +2,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import mainSlice from "./slices/mainSlice";
 import scrollSlice from "./slices/scrollSlice";
-import aboutSlice from "./slices/aboutSlice";
+import bioSlice from "./slices/bioSlice";
+import mainSkillsSlice from "./slices/mainSkillsSlice";
 
 export const store = configureStore({
   reducer: {
     mainSlice,
     scrollSlice,
-    aboutSlice,
+    bioSlice,
+    mainSkillsSlice,
   },
 });

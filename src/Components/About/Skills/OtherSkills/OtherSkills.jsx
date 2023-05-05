@@ -21,7 +21,6 @@ const OtherSkills = () => {
       await axios.get(API_URL4).then((res) => {
         dispatch(setOtherSkills(res.data));
         dispatch(setLoading(false));
-        console.log(res.data);
       });
     })();
   }, []);

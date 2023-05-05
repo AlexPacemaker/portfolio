@@ -19,7 +19,6 @@ const MainSkills = () => {
       await axios.get(API_URL3).then((res) => {
         dispatch(setMainSkills(res.data));
         dispatch(setLoading(false));
-        console.log(res.data);
       });
     })();
   }, []);

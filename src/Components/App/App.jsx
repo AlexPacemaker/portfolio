@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import MainOutlet from "../Outlets/MainOutlet";
 import About from "../About/About";
 import NotFound from "../NotFound/NotFound";
-import ScrollToTopButton from "../ScrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
-      <ScrollToTopButton />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import axios from "axios";
 import Card from "../Card/Card";
 import styles from "./Main.module.scss";
 import { API_URL } from "../../config";
+import ScrollToTopButton from "../ScrollToTop/ScrollToTop";
 
 //определение компонента
 const Main = () => {
@@ -33,6 +34,9 @@ const Main = () => {
   return (
     <div className={styles.container}>
       {loading ? <h2>Loading...</h2> : cardOutput}
+      <div className={styles.scroll}>
+        <ScrollToTopButton />
+      </div>
     </div>
   );
 };

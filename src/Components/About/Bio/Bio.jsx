@@ -43,19 +43,7 @@ const Bio = () => {
                 className={styles.text}
                 dangerouslySetInnerHTML={{ __html: cleanData }}
               ></div>
-            </div>
-            {/* <div className={styles.text2}>
-              <p>{data.message2}</p>
-              <div>
-                {data.message3.map((data) => {
-                  return (
-                    <ul key={data}>
-                      <li>{data}</li>
-                    </ul>
-                  );
-                })}
-              </div>
-            </div> */}
+            </div>        
           </>
         )}
       </div>

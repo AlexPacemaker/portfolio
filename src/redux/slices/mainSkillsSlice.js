@@ -1,10 +1,13 @@
+//slice для компонента mainSkills
 import { createSlice } from "@reduxjs/toolkit";
 
+//начальное состояние
 const initialState = {
   mainSkills: [],
-  loading: [],
+  loading: true,
 };
 
+//редюсеры
 export const mainSkillsSlice = createSlice({
   name: "mainSkills",
   initialState,

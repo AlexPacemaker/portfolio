@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./OtherSkillCard.module.scss";
 
+//карточка с второстепенными скилами
 const OtherSkillCard = ({ title, imgUrl }) => {
   return (
     <div className={styles.container}>

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./MainSkillsCard.module.scss";
 
+//карточка с основными скилами
 const MainSkillsCard = ({ title, imgUrl }) => {
   return (
     <div className={styles.container}>

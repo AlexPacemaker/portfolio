@@ -4,6 +4,7 @@ import mainSlice from "./slices/mainSlice";
 import scrollSlice from "./slices/scrollSlice";
 import bioSlice from "./slices/bioSlice";
 import mainSkillsSlice from "./slices/mainSkillsSlice";
+import otherSkillsSlice from "./slices/otherSkillsSlice";
 
 export const store = configureStore({
   reducer: {
@@ -11,5 +12,6 @@ export const store = configureStore({
     scrollSlice,
     bioSlice,
     mainSkillsSlice,
+    otherSkillsSlice,
   },
 });

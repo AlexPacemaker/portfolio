@@ -9,6 +9,7 @@ import {
 import MainSkillsCard from "./MainSkillsCard/MainSkillsCard";
 import styles from "./MainSkills.module.scss";
 
+//компонент получения с бэка данных по основным скилам и отрисовка карточке со скилами
 const MainSkills = () => {
   const { mainSkills, loading } = useSelector((state) => state.mainSkillsSlice);
   const dispatch = useDispatch();

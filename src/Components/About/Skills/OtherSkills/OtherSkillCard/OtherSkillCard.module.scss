@@ -1,11 +1,11 @@
 .container {
-  width: 200px;
+  width: 170px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   transition: 0.5s ease-in-out;
-  padding: 10px;
+  padding: 8px;
   margin-right: 90px;
   margin-bottom: 25px;
   img {
@@ -21,7 +21,7 @@
     box-shadow: 0 0 15px 5px grey;
   }
   p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
   }
 }

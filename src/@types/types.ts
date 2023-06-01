@@ -1,6 +1,9 @@
-export interface Movie {
-  Title: string;
-  Year: string;
-  Poster: string;
-  [key: string]: any;
+export interface CardProps {
+  id: number;
+  title: string;
+  imgUrl: string;
+  description: string;
+  description2: string;
+  techs: string[];
+  refs: string[];
 }

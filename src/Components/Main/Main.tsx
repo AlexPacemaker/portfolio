@@ -38,7 +38,7 @@ const Main: React.FC = () => {
   }, []);
 
   const cardOutput = items.map((item: ICard) => (
-    <Card key={item.id} item={item} />
+    <Card key={item.id} {...item} />
   ));
 
   //Страница Main выводит данные (items) в виде карточек при их наличии и выводит сообщение загрузки (loading) на время получения данных.

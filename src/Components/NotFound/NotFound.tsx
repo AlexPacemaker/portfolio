@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./NotFound.module.scss";
 
 //компонент возвращает страницу с jsx разметкой, если такой страницы на сайте нет
-const NotFound = () => {
+const NotFound: React.FC = () => {
   return (
     <div className={styles.container}>
       <span>😕</span>

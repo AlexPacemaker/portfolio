@@ -1,11 +1,12 @@
 //импорты необходимых компонентов
+import React from "react";
 import Main from "../Main/Main";
 import { Routes, Route } from "react-router-dom";
 import MainOutlet from "../Outlets/MainOutlet";
 import About from "../About/About";
 import NotFound from "../NotFound/NotFound";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div>
       {/* маршрутизация приложения */}
@@ -18,6 +19,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

@@ -19,6 +19,6 @@ export const scrollSlice = createSlice({
   },
 });
 
-export const selectScrollData = (state: RootState) => state.scroll.visible;
+export const selectScrollData = (state: RootState) => state.scrollSlice.visible;
 export const { setVisible } = scrollSlice.actions;
 export default scrollSlice.reducer;

@@ -6,7 +6,7 @@ import MainOutlet from "../Outlets/MainOutlet";
 import About from "../About/About";
 import NotFound from "../NotFound/NotFound";
 
-const App: React.FC = () => {
+const App = (): JSX.Element => {
   return (
     <div>
       {/* маршрутизация приложения */}

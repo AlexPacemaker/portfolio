@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 // Компонент Header возвращает контейнер с тремя навигационными ссылками на разделы "Портфолио", "Обо мне" и "GitHub".
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <>
       <div className={styles.container}>

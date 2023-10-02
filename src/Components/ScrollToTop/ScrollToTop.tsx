@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./ScrollToTop.module.scss";
+import { ScrollProps } from "./ScrollToTop.props";
 
 //компонент кнопки возврата в начало страницы
-const ScrollToTopButton = () => {
-  const [visible, setVisible] = React.useState(false);
+const ScrollToTopButton: React.FC<ScrollProps> = () => {
+  const [visible, setVisible] = React.useState<boolean>(false);
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;

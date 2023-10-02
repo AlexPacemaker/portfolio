@@ -16,9 +16,7 @@ interface MainState {
 
 //определение компонента
 const Main: React.FC = () => {
-  const { items, loading } = useSelector(
-    (state: { mainSlice: MainState }) => state.mainSlice
-  );
+  const { items, loading } = useSelector((state: { mainSlice: MainState }) => state.mainSlice);
   const dispatch = useDispatch();
 
   //ассинхронный запрос на бэк
@@ -35,11 +33,10 @@ const Main: React.FC = () => {
     } catch (error) {
       console.log(error);
     }
+    //eslint-disable-next-line
   }, []);
 
-  const cardOutput = items.map((item: ICard) => (
-    <Card key={item.id} {...item} />
-  ));
+  const cardOutput = items.map((item: ICard) => <Card key={item.id} {...item} />);
 
   //Страница Main выводит данные (items) в виде карточек при их наличии и выводит сообщение загрузки (loading) на время получения данных.
   return (

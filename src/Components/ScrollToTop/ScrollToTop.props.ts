@@ -1,3 +1,3 @@
 export interface ScrollProps {
-  visible: boolean;
+  visible?: boolean;
 }

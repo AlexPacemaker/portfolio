@@ -1,5 +1,5 @@
 //необходимые импорты
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setItems, setLoading } from "../../redux/slices/mainSlice";
 import axios from "axios";
@@ -7,12 +7,8 @@ import Card from "../Card/Card";
 import styles from "./Main.module.scss";
 import { API_URL } from "../../config";
 import ScrollToTopButton from "../ScrollToTop/ScrollToTop";
+import { MainState } from "./Main.interface";
 import { CardProps as ICard } from "../../@types/types";
-
-interface MainState {
-  items: ICard[];
-  loading: boolean;
-}
 
 //определение компонента
 const Main: React.FC = () => {
@@ -20,7 +16,7 @@ const Main: React.FC = () => {
   const dispatch = useDispatch();
 
   //ассинхронный запрос на бэк
-  useEffect(() => {
+  React.useEffect(() => {
     try {
       (async () => {
         if (API_URL)

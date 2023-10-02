@@ -1,19 +1,16 @@
 import React from "react";
 import styles from "./ScrollToTop.module.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { setVisible } from "../../redux/slices/scrollSlice";
 
 //компонент кнопки возврата в начало страницы
 const ScrollToTopButton = () => {
-  const { visible } = useSelector((state) => state.scrollSlice);
-  const dispatch = useDispatch();
+  const [visible, setVisible] = React.useState(false);
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
     if (scrolled > 300) {
-      dispatch(setVisible(true));
+      setVisible(true);
     } else if (scrolled <= 300) {
-      dispatch(setVisible(false));
+      setVisible(false);
     }
   };
 
@@ -28,10 +25,7 @@ const ScrollToTopButton = () => {
 
   return (
     <div className={styles.scroll}>
-      <button
-        onClick={scrollToTop}
-        style={{ display: visible ? "inline" : "none" }}
-      >
+      <button onClick={scrollToTop} style={{ display: visible ? "inline" : "none" }}>
         Наверх
       </button>
     </div>

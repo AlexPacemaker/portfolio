@@ -1,26 +1,27 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React from "react";
 import { API_URL3 } from "../../../../config";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  setLoading,
-  setMainSkills,
-} from "../../../../redux/slices/mainSkillsSlice";
+import { setLoading, setMainSkills } from "../../../../redux/slices/mainSkillsSlice";
 import MainSkillsCard from "./MainSkillsCard/MainSkillsCard";
 import styles from "./MainSkills.module.scss";
+import { RootState } from "../../../../redux/store";
 
 //компонент получения с бэка данных по основным скилам и отрисовка карточке со скилами
 const MainSkills = () => {
-  const { mainSkills, loading } = useSelector((state) => state.mainSkillsSlice);
+  const { mainSkills, loading } = useSelector((state: RootState) => state.mainSkillsSlice);
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  React.useEffect(() => {
     (async () => {
-      await axios.get(API_URL3).then((res) => {
-        dispatch(setMainSkills(res.data));
-        dispatch(setLoading(false));
-      });
+      if (typeof API_URL3 === "string") {
+        await axios.get(API_URL3).then((res) => {
+          dispatch(setMainSkills(res.data));
+          dispatch(setLoading(false));
+        });
+      }
     })();
+    //eslint-disable-next-line
   }, []);
 
   return (
@@ -28,9 +29,7 @@ const MainSkills = () => {
       {loading ? (
         <h2>Loading...</h2>
       ) : (
-        mainSkills.map((mainSkill) => (
-          <MainSkillsCard key={mainSkill.id} {...mainSkill} />
-        ))
+        mainSkills.map((mainSkill) => <MainSkillsCard key={mainSkill.id} {...mainSkill} />)
       )}
     </div>
   );

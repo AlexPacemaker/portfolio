@@ -5,20 +5,23 @@ import DOMPurify from "dompurify";
 import { useDispatch, useSelector } from "react-redux";
 import { setLoading, setData } from "../../../redux/slices/bioSlice";
 import { API_URL2 } from "../../../config";
+import { RootState } from "../../../redux/store";
 
 const Bio = (): JSX.Element => {
-  const { data, loading } = useSelector((state) => state.bioSlice);
+  const { data, loading } = useSelector((state: RootState) => state.bioSlice);
   const dispatch = useDispatch();
 
   //Используется useEffect для отправки асинхронного запроса на бэкэнд, получения данных и установки состояния
   React.useEffect(() => {
     try {
       (async () => {
-        await axios.get(API_URL2).then((res) => {
-          //Используются функции из redux slices для обновления состояния с загруженными данными и выполненным загрузкой флагом
-          dispatch(setData(res.data));
-          dispatch(setLoading(false));
-        });
+        if (typeof API_URL2 === "string") {
+          await axios.get(API_URL2).then((res) => {
+            //Используются функции из redux slices для обновления состояния с загруженными данными и выполненным загрузкой флагом
+            dispatch(setData(res.data));
+            dispatch(setLoading(false));
+          });
+        }
       })();
     } catch (error) {
       console.log(error);

@@ -1,8 +1,19 @@
 //сдайс для otherSkills
 import { createSlice } from "@reduxjs/toolkit";
 
+interface OtherSkillProps {
+  id: string;
+  imgUrl: string;
+  title: string;
+}
+
+interface initialStateProps {
+  otherSkills: OtherSkillProps[];
+  loading: boolean;
+}
+
 //начальное состояние
-const initialState = {
+const initialState: initialStateProps = {
   otherSkills: [],
   loading: true,
 };
@@ -21,6 +32,5 @@ export const otherSkillsSlice = createSlice({
   },
 });
 
-export const { otherSkills, loading, setLoading, setOtherSkills } =
-  otherSkillsSlice.actions;
+export const { setLoading, setOtherSkills } = otherSkillsSlice.actions;
 export default otherSkillsSlice.reducer;

@@ -2,17 +2,10 @@
 import React from "react";
 import styles from "./Card.module.scss";
 import { NavLink } from "react-router-dom";
-import { CardProps } from "../../@types/types";
+import { CardProps } from "./Card.props";
 
 //Создаем компонент Card, который принимает несколько пропсов
-const Card: React.FC<CardProps> = ({
-  title,
-  imgUrl,
-  description,
-  description2,
-  techs,
-  refs,
-}) => {
+const Card = ({ title, imgUrl, description, description2, techs, refs }: CardProps): JSX.Element => {
   //Возвращаем JSX разметку, используя стили из модуля Card. Разметка содержит блок с заголовком и изображением проекта, а также блок с описанием проекта, технологиями и ссылками на Github и Github Pages.
   return (
     <div className={styles.container}>

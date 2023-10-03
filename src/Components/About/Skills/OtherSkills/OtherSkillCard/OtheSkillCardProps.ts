@@ -1,4 +1,4 @@
-export interface MainSkillsProps {
+export interface OtherSkillsProps {
   title: string;
   imgUrl: string;
 }

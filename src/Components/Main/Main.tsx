@@ -8,7 +8,7 @@ import styles from "./Main.module.scss";
 import { API_URL } from "../../config";
 import ScrollToTopButton from "../ScrollToTop/ScrollToTop";
 import { MainState } from "./Main.interface";
-import { CardProps as ICard } from "../../@types/types";
+import { CardProps as ICard } from "../Card/Card.props";
 
 //определение компонента
 const Main: React.FC = () => {

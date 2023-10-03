@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MainSkillsCard.module.scss";
-import { MainSkillsProps } from "./MainSkillsCardProps";
+import { MainSkillsProps } from "../../OtherSkills/OtherSkillCard/OtheSkillCardProps";
 
 //карточка с основными скилами
 const MainSkillsCard = ({ title, imgUrl }: MainSkillsProps): JSX.Element => {

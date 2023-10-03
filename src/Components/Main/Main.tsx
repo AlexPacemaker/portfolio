@@ -7,12 +7,12 @@ import Card from "../Card/Card";
 import styles from "./Main.module.scss";
 import { API_URL } from "../../config";
 import ScrollToTopButton from "../ScrollToTop/ScrollToTop";
-import { MainState } from "./Main.interface";
 import { CardProps as ICard } from "../Card/Card.props";
+import { RootState } from "../../redux/store";
 
 //определение компонента
 const Main: React.FC = () => {
-  const { items, loading } = useSelector((state: { mainSlice: MainState }) => state.mainSlice);
+  const { items, loading } = useSelector((state: RootState) => state.mainSlice);
   const dispatch = useDispatch();
 
   //ассинхронный запрос на бэк

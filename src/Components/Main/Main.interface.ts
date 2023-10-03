@@ -1,4 +1,4 @@
-import { CardProps as ICard } from "../../@types/types";
+import { CardProps as ICard } from "../Card/Card.props";
 
 export interface MainState {
   items: ICard[];

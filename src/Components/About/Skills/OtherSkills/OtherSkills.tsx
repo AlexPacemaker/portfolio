@@ -2,10 +2,10 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { API_URL4 } from "../../../../config";
-import OtherSkillCard from "./OtherSkillsCard/OtherSkillsCard";
 import styles from "./OtheSkills.module.scss";
 import { setLoading, setOtherSkills } from "../../../../redux/slices/otherSkillsSlice";
 import { RootState } from "../../../../redux/store";
+import OtherSkillsCard from "./OtherSkillsCard/OtherSkillsCard";
 
 //получаем данные с бэками и отрисовываем карточки
 const OtherSkills = () => {
@@ -29,7 +29,7 @@ const OtherSkills = () => {
       {loading ? (
         <h2>Loading...</h2>
       ) : (
-        otherSkills.map((otherSkill) => <OtherSkillCard key={otherSkill.id} {...otherSkill} />)
+        otherSkills.map((otherSkill) => <OtherSkillsCard key={otherSkill.id} {...otherSkill} />)
       )}
     </div>
   );
